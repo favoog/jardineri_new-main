@@ -1,0 +1,19 @@
+.error {
+   color: red;
+}
+.name-div{
+margin-bottom: 20px;   
+}
+
+.text-alert{
+   margin-bottom: 0;   
+}
+
+.pass-div{
+   padding: 0;
+   
+}
+
+.button-class{
+   padding: 12px;
+}

@@ -1,0 +1,62 @@
+/* inicio de los registrados */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containerR{
+    width: 900px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+ 
+
+.controls{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 26px;
+    border: 1px solid #1f53c5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.containerR p{
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.containerR a{
+    color: rgb(#1f53c5);
+    text-decoration: none;
+}
+
+.containerR a:hover{
+    color: rgb(#1f53c5);
+    text-decoration: underline;
+}
+
+.containerR .btn{
+    display: block;   
+    width: 20%;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.container p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}

@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    
+    <div class="container mb-5 mt-5">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'img/cama1.png.jpg' %}" class="d-block w-100" alt="..." width="100%" height="auto">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'img/mueble2.png.jpg' %}" class="d-block w-100" alt="..." width="100%" height="auto">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'img/mesaComedor.png.jpg' %}" class="d-block w-100" alt="..." width="100%" height="auto">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+
+    <div class="container">
+        <section class="hero align-items-stretch">
+            <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
+                <img class="hero-imagen-desarollador rounded-circle" src="{% static 'img/icon-jardin.png' %}" alt="foto de portada">
+                <h1>Hola bienvenido a Capibara Muebleria</h1>
+                <h2></h2>
+            </div>
+            <div class="hero-inferior">
+                <img class="hero-inferior-imagen img-fluid" src="{% static 'img/Capibara1.png.jpg' %}" alt="">
+            </div>
+        </section>
+        <!-- Segunda sección -->
+        <section class="sobre-mi seccion-oscura">
+            <div class="contenedor">
+                <h2 class="seccion-titulo">Acerca de nosotros</h2>
+                <p class="seccion-texto">Capibara es una pagina dedicada para la venta de muebles para la remodelacion y renovacion de su hogar trabajamos con los mejores
+                    proveedores tanto de madera como de repuestos y accesorios, tambien contamos con delivery a su domecilio en cualquier parte de Chile
+                    nos preocupa su hogar por eso le entregamos lo mas rapido su producto con la mejor disponibilidad y accesibilidad</p>
+            </div>
+        </section>
+        <!-- Productos -->
+        <section class="productos-recientes seccion-clara d-flex flex-column">
+            <h2 class="seccion-titulo texto-negro">Productos disponibles</h2>
+            <h3 class="seccion-descripcion">Estos son algunos de los principales productos que podrás encontrar en nuestra
+                página</h3>
+            <div class="modaal mb-5">
+                <!-- Button trigger modal -->
+                <h3>Productos en Stock</h3>
+                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver los más
+                </button> -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Ver más productos!!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h3>Aquí encontrarás más variedades de flores, arbustos entre otras cosas!!</h3>
+                                <p>Actualmente seguimos trabajando para entregarte la mejor información sobre nuestros
+                                    próximos productos, sé paciente
+                                    y espera lo que se viene, ¡estará mortal!
+                                </p>
+                            </div> -->
+                            <div class="modal-footer">
+                                <button type="button" id="btnCerrar" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-danger">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Galería de productos -->
+            <div class="container text-center productos-contenedor">
+                <div class="row">
+                    <!-- Producto 1 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="productos">
+                            <img src="{% static 'img/cama1.png.jpg' %}" alt="Cama">
+                            <div class="overlay">
+                                <p>Camas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 2 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="productos">
+                            <img src="{% static 'img/mueble2.png.jpg' %}" alt="Flores">
+                            <div class="overlay">
+                                <p>Veladores</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 3 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="productos">
+                            <img src="{% static 'img/mueble3.png' %}" alt="Arbusto">
+                            <div class="overlay">
+                                <p>Muebles Cocina</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 4 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="productos">
+                            <img src="{% static 'img/mesaComedor.png.jpg' %}" alt="Tierra de hojas">
+                            <div class="overlay">
+                                <p>Comedor y Sillas</p>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}    

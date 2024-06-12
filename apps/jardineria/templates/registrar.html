@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+<!-- body -->
+{% block body %}
+    <link rel="stylesheet" href="{% static 'css/registrar.css' %}">
+
+    <!-- inicio formulario Cris -->
+    <div class="container mt-5">
+        <form action="#" id="miFormulario2">
+            <div class="form-group">
+                <div class="shadow-none p-3 mb-5 bg-body-tertiary rounded">
+                    <label id="label" for="txtUsuario">Usuario: </label>
+                    <input id="txtUsuario" name="txtUsuario" type="text" class="form-control"
+                        placeholder="Ingrese un usuario">
+
+                    <br>
+
+                    <label id="label" for="txtNombre">Nombres: </label>
+                    <input id="txtNombre" name="txtNombre" type="text" class="form-control" placeholder="Ingrese su nombre">
+
+                    <br>
+
+                    <label id="label" for="txtApellido">Apellido: </label>
+                    <input id="txtApellido" name="txtApellido" type="text" class="form-control"
+                        placeholder="Ingrese su apellido">
+
+                    <br>
+
+                    <label id="label" for="txtNumero">Numero: </label>
+                    <input id="txtNumero" name="txtNumero" type="number" class="form-control"
+                        placeholder="Ingrese su número">
+
+                    <br>
+
+                    <label id="label" for="txtCorreo">Correo: </label>
+                    <input id="txtCorreo" name="txtCorreo" type="text" class="form-control" placeholder="Ingrese un correo">
+
+                    <br>
+
+                    <label id="label" for="txtPassword">Contraseña: </label>
+                    <input id="txtPassword" name="txtPassword" type="password" class="form-control"
+                        placeholder="Ingrese una contraseña válida">
+
+                    <br>
+
+                    <label id="label" for="txtPasswordConfirmate">Confirmación de contraseña: </label>
+                    <input id="txtPasswordConfirmate" name="txtPasswordConfirmate" type="password" class="form-control"
+                        placeholder="Ingrese la confirmación de la contraseña">
+
+                    <br>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="adminCheck" name="adminCheck">
+                        <label class="form-check-label" for="adminCheck">
+                            Registrarse como Administrador
+                        </label>
+                    </div>
+
+                    <br>
+
+                    <div id="adminFields" style="display:none;">
+                        <label id="label" for="txtRUT">RUT: </label>
+                        <input id="txtRUT" name="txtRUT" type="text" class="form-control"
+                            placeholder="Ingrese el RUT (8 dígitos más dígito verificador separado por '-')">
+                        <br>
+                    </div>
+
+                    <div class="container-btn mt-5">
+                        <button class="btn btn-success" type="submit">Registrarse</button>
+                        <br>
+                        <br>
+                        <p><a href="#"></a></p>
+                        <p><a class="btn btn-success" href="/registrado">Iniciar sesión</a></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/registrar.js' %}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#adminCheck').change(function() {
+                if ($(this).is(':checked')) {
+                    $('#adminFields').show();
+                } else {
+                    $('#adminFields').hide();
+                }
+            });
+        });
+    </script>
+{% endblock %}
+
+<!-- scripts Js -->
+{% block script %}
+{% endblock %}
